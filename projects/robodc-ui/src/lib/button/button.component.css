@@ -1,0 +1,75 @@
+.robodc-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  border-radius: 11px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.robodc-button:hover {
+  transform: scale(1.05);
+}
+
+/* Variants */
+.rdc-btn-primary {
+  background: #007bff;
+  box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rdc-btn-info {
+  background: #17a2b8;
+  box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rdc-btn-success {
+  background: #28a745;
+  box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rdc-btn-danger {
+  background: #dc3545;
+  box-shadow: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Types */
+.rdc-btn-normal {
+  width: auto;
+}
+
+.rdc-btn-squared {
+  width: 10rem;
+  height: 10rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rdc-btn-stretched {
+  width: 100%;
+}
+
+/* Sizes */
+.rdc-btn-sm {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.rdc-btn-md {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 11px;
+}
+
+.rdc-btn-lg {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 14px;
+}
