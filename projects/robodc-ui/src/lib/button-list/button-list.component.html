@@ -1,0 +1,11 @@
+<div class="button-list">
+  @for (button of buttons; track $index) {
+  <robodc-button
+    [label]="button.label"
+    [variant]="button.variant || 'primary'"
+    type="squared"
+    [size]="button.size || 'md'"
+    (onClick)="onButtonClick($index)"
+  ></robodc-button>
+  }
+</div>

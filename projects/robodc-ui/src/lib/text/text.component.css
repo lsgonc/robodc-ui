@@ -1,0 +1,35 @@
+.text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  color: #333;
+}
+
+.text-sm {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.text-md {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-lg {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .text-sm {
+    font-size: 12px;
+  }
+
+  .text-md {
+    font-size: 14px;
+  }
+
+  .text-lg {
+    font-size: 16px;
+  }
+}

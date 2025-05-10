@@ -1,0 +1,19 @@
+.button-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas no desktop */
+  gap: 16px; /* Espaçamento entre botões */
+  padding: 16px;
+  width: fit-content;
+}
+
+@media (max-width: 1024px) {
+  .button-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+  }
+}
+
+@media (max-width: 600px) {
+  .button-list {
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
+  }
+}

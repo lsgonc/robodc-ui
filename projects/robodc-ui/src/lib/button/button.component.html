@@ -1,11 +1,16 @@
-<button class="robodc-button" [ngClass]="{
-  'rdc-btn-primary': (variant === 'primary'),
-  'rdc-btn-info': variant === 'info',
-  'rdc-btn-success': variant === 'success',
-  'rdc-btn-danger': variant === 'danger',
-  'rdc-btn-normal': type === 'normal',
-  'rdc-btn-squared': type === 'squared',
-  'rdc-btn-sm': size === 'sm',
-  'rdc-btn-md': size === 'md',
-  'rdc-btn-lg': size === 'lg',
-}">{{ label }}</button>
+<button
+  class="robodc-button"
+  (click)="onButtonClick()"
+  [ngClass]="{
+    'rdc-btn-primary': variant === 'primary',
+    'rdc-btn-info': variant === 'info',
+    'rdc-btn-success': variant === 'success',
+    'rdc-btn-danger': variant === 'danger',
+    'rdc-btn-normal': type === 'normal',
+    'rdc-btn-squared': type === 'squared',
+    'rdc-btn-sm': size === 'sm',
+    'rdc-btn-md': size === 'md',
+    'rdc-btn-lg': size === 'lg',
+    'rdc-btn-full-width': fullWidth
+  }"
+>{{ label }}</button>

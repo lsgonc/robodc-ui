@@ -1,0 +1,28 @@
+<div class="modal-overlay" [ngClass]="{ 'open': isOpen }" (click)="onClose()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="modal-close-btn" (click)="onClose()" aria-label="Fechar modal">×</button>
+    <div class="modal-image">
+        @if(imageUrl) {
+            <img [src]="imageUrl" alt="Modal Image" />
+        } @else {
+            <div class="without-image">
+                
+            </div>
+        }
+    </div>
+    <div class="modal-body">
+      <h2 class="modal-title">{{ title }}</h2>
+      <p class="modal-description">{{ description }}</p>
+      <div class="modal-footer">
+        <robodc-button
+          [label]="buttonLabel"
+          variant="success"
+          type="normal"
+          size="md"
+          [fullWidth]="true"
+          (onClick)="onButtonClick()"
+        ></robodc-button>
+      </div>
+    </div>
+  </div>
+</div>
