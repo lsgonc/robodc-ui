@@ -1,0 +1,8 @@
+<a
+  [ngClass]="['link', 'link-' + size, disabled ? 'link-disabled' : '']"
+  [href]="disabled ? null : href"
+  [target]="target"
+  [attr.aria-disabled]="disabled ? 'true' : null"
+>
+  <ng-content></ng-content>
+</a>

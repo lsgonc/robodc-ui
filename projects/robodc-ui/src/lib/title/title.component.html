@@ -1,1 +1,85 @@
-<p>title works!</p>
+@if (level === 1) {
+  <h1 [ngClass]="[
+    'title',
+    'title-' + size,
+    type ? 'title-' + type : '',
+    disabled ? 'title-disabled' : '',
+    mark ? 'title-mark' : '',
+    code ? 'title-code' : '',
+    keyboard ? 'title-keyboard' : '',
+    underline ? 'title-underline' : '',
+    delete ? 'title-delete' : '',
+    strong ? 'title-strong' : '',
+    italic ? 'title-italic' : ''
+  ]">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h1>
+} @else if (level === 2) {
+  <h2 [ngClass]="[
+    'title',
+    'title-' + size,
+    type ? 'title-' + type : '',
+    disabled ? 'title-disabled' : '',
+    mark ? 'title-mark' : '',
+    code ? 'title-code' : '',
+    keyboard ? 'title-keyboard' : '',
+    underline ? 'title-underline' : '',
+    delete ? 'title-delete' : '',
+    strong ? 'title-strong' : '',
+    italic ? 'title-italic' : ''
+  ]">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h2>
+} @else if (level === 3) {
+  <h3 [ngClass]="[
+    'title',
+    'title-' + size,
+    type ? 'title-' + type : '',
+    disabled ? 'title-disabled' : '',
+    mark ? 'title-mark' : '',
+    code ? 'title-code' : '',
+    keyboard ? 'title-keyboard' : '',
+    underline ? 'title-underline' : '',
+    delete ? 'title-delete' : '',
+    strong ? 'title-strong' : '',
+    italic ? 'title-italic' : ''
+  ]">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h3>
+} @else if (level === 4) {
+  <h4 [ngClass]="[
+    'title',
+    'title-' + size,
+    type ? 'title-' + type : '',
+    disabled ? 'title-disabled' : '',
+    mark ? 'title-mark' : '',
+    code ? 'title-code' : '',
+    keyboard ? 'title-keyboard' : '',
+    underline ? 'title-underline' : '',
+    delete ? 'title-delete' : '',
+    strong ? 'title-strong' : '',
+    italic ? 'title-italic' : ''
+  ]">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h4>
+} @else if (level === 5) {
+  <h5 [ngClass]="[
+    'title',
+    'title-' + size,
+    type ? 'title-' + type : '',
+    disabled ? 'title-disabled' : '',
+    mark ? 'title-mark' : '',
+    code ? 'title-code' : '',
+    keyboard ? 'title-keyboard' : '',
+    underline ? 'title-underline' : '',
+    delete ? 'title-delete' : '',
+    strong ? 'title-strong' : '',
+    italic ? 'title-italic' : ''
+  ]">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </h5>
+}
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

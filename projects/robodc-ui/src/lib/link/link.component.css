@@ -1,0 +1,46 @@
+.link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #0055AB; /* Azul padrão do Ant Design */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover:not(.link-disabled) {
+  color: #40a9ff;
+}
+
+.link-sm {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.link-md {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.link-lg {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.link-disabled {
+  color: #d9d9d9;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .link-sm {
+    font-size: 12px;
+  }
+
+  .link-md {
+    font-size: 14px;
+  }
+
+  .link-lg {
+    font-size: 16px;
+  }
+}

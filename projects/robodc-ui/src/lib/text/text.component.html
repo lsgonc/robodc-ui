@@ -1,3 +1,17 @@
-<p [ngClass]="['text', 'text-' + size]">
+<p
+  [ngClass]="[
+    'text',
+    'text-' + size,
+    type ? 'text-' + type : '',
+    disabled ? 'text-disabled' : '',
+    mark ? 'text-mark' : '',
+    code ? 'text-code' : '',
+    keyboard ? 'text-keyboard' : '',
+    underline ? 'text-underline' : '',
+    delete ? 'text-delete' : '',
+    strong ? 'text-strong' : '',
+    italic ? 'text-italic' : ''
+  ]"
+>
   <ng-content></ng-content>
 </p>
