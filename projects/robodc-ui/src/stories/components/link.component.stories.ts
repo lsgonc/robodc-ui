@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { LinkComponent } from '../lib/link/link.component';
+import { LinkComponent } from '../../lib/link/link.component';
 
 export default {
   title: 'Components/Link',

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { ButtonListComponent, ButtonConfig } from '../lib/button-list/button-list.component';
+import { ButtonListComponent, ButtonConfig } from '../../lib/button-list/button-list.component';
 
 export default {
   title: 'Components/ButtonList',

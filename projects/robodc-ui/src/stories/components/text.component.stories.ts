@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { TextComponent } 
  
- from '../lib/text/text.component';
+ from '../../lib/text/text.component';
 export default {
   title: 'Components/Text',
   component: TextComponent,

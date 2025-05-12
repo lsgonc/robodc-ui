@@ -1,11 +1,12 @@
 import { moduleMetadata, StoryObj, Meta } from '@storybook/angular';
-import { ButtonComponent } from '../lib/button/button.component';
+import { ButtonComponent } from '../../lib/button/button.component';
 import { NgClass } from '@angular/common';
 
 // Metadata do componente
 export default {
   title: 'Components/Button',
   component: ButtonComponent,
+  tags: ['autodocs'],
   decorators: [
     moduleMetadata({
       imports: [NgClass],
@@ -130,16 +131,5 @@ export const Large = {
     variant: 'primary',
     type: 'normal',
     size: 'lg',
-  },
-};
-
-// História interativa com ação de clique
-export const WithClick = {
-  ...Template,
-  args: {
-    label: 'Clique em Mim',
-    variant: 'success',
-    type: 'normal',
-    size: 'md',
   },
 };

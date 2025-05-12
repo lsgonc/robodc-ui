@@ -1,0 +1,23 @@
+<div class="carousel-container">
+  <button class="nav-button prev" (click)="prev()" aria-label="Previous">&lt;</button>
+  <div class="carousel">
+    <div class="carousel-inner" [style.transform]="'translateX(-' + (currentIndex * cardWidth) + 'rem)'">
+      <robodc-card
+        *ngFor="let card of cards; index as i"
+        [title]="card.title"
+        [imgUrl]="card.imgUrl"
+        (click)="onCardClick(i)"
+        [style.width]="cardWidth + 'rem'"
+      ></robodc-card>
+    </div>
+  </div>
+  <button class="nav-button next" (click)="next()" aria-label="Next">&gt;</button>
+  <div class="pagination">
+    <span
+      *ngFor="let card of cards; let i = index"
+      class="dot"
+      [class.active]="i >= currentIndex && i < currentIndex + cardsToShow"
+      (click)="goTo(i)"
+    ></span>
+  </div>
+</div>

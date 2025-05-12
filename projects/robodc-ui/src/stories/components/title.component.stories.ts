@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { TitleComponent } from '../lib/title/title.component';
+import { TitleComponent } from '../../lib/title/title.component';
 
 export default {
   title: 'Components/Title',

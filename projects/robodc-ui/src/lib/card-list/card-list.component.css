@@ -1,0 +1,103 @@
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 3rem; /* Espaço para os botões de navegação */
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: 1rem; /* Espaço entre os cards */
+  padding: 0 1rem;
+}
+
+robodc-card {
+  flex: 0 0 auto;
+  margin-right: 1rem;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #888;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #FFF;
+}
+
+.dot:hover {
+  background-color: #BBB;
+}
+
+/* Responsividade */
+@media (max-width: 1023px) {
+  .carousel-container {
+    padding: 0 2.5rem;
+  }
+  
+  .nav-button {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-container {
+    padding: 0 2rem;
+  }
+  
+  .carousel-inner {
+    justify-content: center;
+  }
+  
+  .nav-button {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}

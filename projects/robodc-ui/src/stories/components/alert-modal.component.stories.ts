@@ -1,19 +1,15 @@
 import { Meta, StoryObj } from '@storybook/angular';
-import { DetailModalComponent } from '../lib/detail-modal/detail-modal.component';
-import { ButtonComponent } from '../lib/button/button.component';
+import { AlertModalComponent } from '../../lib/alert-modal/alert-modal.component';
+import { ButtonComponent } from '../../lib/button/button.component';
 
 export default {
-    title: 'Components/DetailModal',
-    component: DetailModalComponent,
+    title: 'Components/AlertModal',
+    component: AlertModalComponent,
     tags: ['autodocs'],
     argTypes: {
         isOpen: {
             control: 'boolean',
             description: 'Controla se o modal está aberto ou fechado',
-        },
-        imageUrl: {
-            control: 'text',
-            description: 'URL da imagem exibida à esquerda do modal',
         },
         title: {
             control: 'text',
@@ -23,9 +19,9 @@ export default {
             control: 'text',
             description: 'Descrição exibida abaixo do título',
         },
-        buttonLabel: {
-            control: 'text',
-            description: 'Texto do botão no footer do modal',
+        buttons: {
+            control: 'object',
+            description: 'Lista de configurações para os botões',
         },
         close: {
             action: 'closed',
@@ -36,9 +32,9 @@ export default {
             description: 'Evento emitido quando o botão é clicado',
         },
     },
-} as Meta<DetailModalComponent>;
+} as Meta<AlertModalComponent>;
 
-type Story = StoryObj<DetailModalComponent>;
+type Story = StoryObj<AlertModalComponent>;
 
 export const Default: Story = {
     parameters: {
@@ -50,12 +46,17 @@ export const Default: Story = {
     },
     args: {
         isOpen: true,
-        imageUrl: 'https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg',
         title: 'Bem-vindo ao Modal',
         description:
-            'Este é um modal com uma imagem à esquerda, título, descrição e um botão. Ele é responsivo e flexível!',
-        buttonLabel: 'Botão do modal',
+            'Este é um modal com, título, descrição e um botão. Ele é responsivo e flexível!',
+        buttons: [
+            { label: 'Botão 1', variant: 'info', size: 'lg' },
+            { label: 'Botão 2', variant: 'info', size: 'lg' },
+            { label: 'Botão 3', variant: 'info', size: 'lg' },
+
+        ],
     },
+
 };
 
 export const Closed: Story = {
@@ -68,10 +69,8 @@ export const Closed: Story = {
     },
     args: {
         isOpen: false,
-        imageUrl: 'https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg',
         title: 'Modal Fechado',
         description: 'Este modal está fechado por padrão.',
-        buttonLabel: 'Botão do modal',
     },
 };
 
@@ -85,27 +84,16 @@ export const LongContent: Story = {
     },
     args: {
         isOpen: true,
-        imageUrl: 'https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg',
         title: 'Modal com Conteúdo Longo',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        buttonLabel: 'Botão do modal',
-    },
-};
-
-export const NoImage: Story = {
-    parameters: {
-        docs: {
-            story: {
-                height: '400px',
-            },
-        },
-    },
-    args: {
-        isOpen: true,
-        imageUrl: '',
-        title: 'Modal sem Imagem',
-        description: 'Este modal não possui uma imagem configurada.',
-        buttonLabel: 'Botão do modal',
+        buttons: [
+            { label: 'Botão 1', variant: 'primary', size: 'md' },
+            { label: 'Botão 2', variant: 'info', size: 'md' },
+            { label: 'Botão 3', variant: 'success', size: 'md' },
+            { label: 'Botão 4', variant: 'danger', size: 'md' },
+            { label: 'Botão 5', variant: 'primary', size: 'md' },
+            { label: 'Botão 6', variant: 'info', size: 'md' },
+        ],
     },
 };
