@@ -1,6 +1,7 @@
 <button
   class="robodc-button"
   (click)="onButtonClick()"
+  [disabled]="isDisabled"
   [ngClass]="{
     'rdc-btn-primary': variant === 'primary',
     'rdc-btn-info': variant === 'info',

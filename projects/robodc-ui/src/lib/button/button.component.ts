@@ -13,9 +13,11 @@ export class ButtonComponent {
   @Input() type: 'normal' | 'squared' = 'normal';
   @Input() size: 'sm' | 'md' | 'lg' = 'md';
   @Input() fullWidth: boolean = false; // Nova propriedade para largura total
+  @Input() isDisabled: boolean = false;
   @Output() onClick = new EventEmitter<void>();
 
   onButtonClick() {
+    if (this.isDisabled) return;
     this.onClick.emit();
   }
 }

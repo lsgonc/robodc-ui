@@ -18,5 +18,6 @@ export class TextComponent {
   @Input() delete: boolean = false;
   @Input() strong: boolean = false;
   @Input() italic: boolean = false;
+  @Input() info: boolean = false;
 
 }

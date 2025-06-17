@@ -71,7 +71,7 @@
 }
 
 .rdc-btn-lg:not(.rdc-btn-squared) {
-  padding: 12px 24px;
+  padding: 24px 12px;;
   font-size: 18px;
   border-radius: 14px;
   min-height: 48px;
@@ -95,7 +95,7 @@
 }
 
 .rdc-btn-squared.rdc-btn-lg {
-  padding: 12px;
+  padding: 24px 12px;
   font-size: 18px;
   border-radius: 14px;
   min-width: 80px; /* Tamanho mínimo para consistência */

@@ -1,0 +1,11 @@
+<div class="masked-container">
+  <span class="masked-text">{{ displayText }}</span>
+  <button class="toggle-button" (click)="toggleVisibility()" aria-label="Toggle visibility">
+    <ng-container *ngIf="show; else hiddenIcon">
+      👁️‍🗨️ <!-- Olho aberto -->
+    </ng-container>
+    <ng-template #hiddenIcon>
+      👁️ <!-- Olho fechado -->
+    </ng-template>
+  </button>
+</div>

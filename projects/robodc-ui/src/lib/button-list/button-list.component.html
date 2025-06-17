@@ -1,6 +1,7 @@
-<div class="button-list">
+<div class="button-list" [ngStyle]="{'grid-template-columns': 'repeat(' + columns + ', 1fr)'}">
   @for (button of buttons; track $index) {
   <robodc-button
+    [fullWidth]="true"
     [label]="button.label"
     [variant]="button.variant || 'primary'"
     type="squared"
