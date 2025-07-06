@@ -58,21 +58,21 @@
 /* Sizes - Normal buttons */
 .rdc-btn-sm:not(.rdc-btn-squared) {
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 28px;
   border-radius: 8px;
   min-height: 32px;
 }
 
 .rdc-btn-md:not(.rdc-btn-squared) {
   padding: 8px 16px;
-  font-size: 16px;
+  font-size: 32px;
   border-radius: 11px;
   min-height: 40px;
 }
 
 .rdc-btn-lg:not(.rdc-btn-squared) {
   padding: 24px 12px;;
-  font-size: 18px;
+  font-size: 36px;
   border-radius: 14px;
   min-height: 48px;
 }
@@ -80,7 +80,7 @@
 /* Sizes - Squared buttons */
 .rdc-btn-squared.rdc-btn-sm {
   padding: 8px;
-  font-size: 14px;
+  font-size: 28px;
   border-radius: 8px;
   min-width: 48px; /* Tamanho mínimo para consistência */
   min-height: 48px;
@@ -88,7 +88,7 @@
 
 .rdc-btn-squared.rdc-btn-md {
   padding: 10px;
-  font-size: 16px;
+  font-size: 32px;
   border-radius: 11px;
   min-width: 64px; /* Tamanho mínimo para consistência */
   min-height: 64px;
@@ -96,8 +96,15 @@
 
 .rdc-btn-squared.rdc-btn-lg {
   padding: 24px 12px;
-  font-size: 18px;
+  font-size: 36px;
   border-radius: 14px;
   min-width: 80px; /* Tamanho mínimo para consistência */
   min-height: 80px;
+}
+
+.robodc-button:disabled {
+  opacity: 0.6;
+  color: #fff;
+  cursor: not-allowed;
+  transform: none;
 }

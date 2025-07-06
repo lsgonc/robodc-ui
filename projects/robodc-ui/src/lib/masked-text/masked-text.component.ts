@@ -1,9 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'robodc-masked-text',
   templateUrl: './masked-text.component.html',
-  styleUrls: ['./masked-text.component.css']
+  styleUrls: ['./masked-text.component.css'],
+  imports: [
+    CommonModule
+  ]
 })
 export class MaskedTextComponent {
   @Input() text: string = '';
