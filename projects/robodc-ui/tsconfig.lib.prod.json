@@ -3,7 +3,10 @@
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
-    "declarationMap": false
+    "declaration": true,   
+    "declarationMap": true,       
+    "emitDecoratorMetadata": true, 
+    "strict": true 
   },
   "angularCompilerOptions": {
     "compilationMode": "partial"
